@@ -46,6 +46,46 @@ bool searchWord(string word) {   // alto
     return currentNode->isWord;
 }
 
+bool isEmpty(node* root){
+    for (int i = 0; i < 27; i++)
+        if (root->children[i])
+            return false;
+    return true;
+}
+
+node* deleteWord(node* root, string word,int depth){
+    node *currentNode =  trie;  
+
+    // Si nos encontramos en el ultimo caracter
+    if (depth == word.size()) {
+ 
+        // Este nodo ya no será el fin de una palabra
+        if (root->isWord)
+            root->isWord = false;
+ 
+        // Si el nodo no es prefijo de otras palabras
+        if (isEmpty(root)) {
+            delete (root);
+            root = NULL;
+        }
+
+        return root;
+    }
+ 
+    // Usamos recursividad para llegar al ultimo caracter
+    int index = word[depth] - 'a';
+    root->children[index] =
+          deleteWord(root->children[index], word, depth + 1);
+ 
+    // Si el nodo ya no tiene hijos y no es el fin de ninguna palabra
+    if (isEmpty(root) && !root->isWord) {
+        delete (root);
+        root = NULL;
+    }
+ 
+    return root;
+}
+
 
 /*
 int findWords(string prefix) {   // alto 
