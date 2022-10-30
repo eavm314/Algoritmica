@@ -15,7 +15,8 @@ En general, la complejidad temporal de los algoritmos de este tipo llegan a ser 
 -  [Good Morning](https://vjudge.net/problem/Kattis-goodmorning)
     - [Solución](GoodMorning.cpp)
 -  [Geppetto](https://vjudge.net/problem/Kattis-geppetto)
-    - [Solución](Geppetto.cpp)
+    - [Solución](Geppetto.cpp) - _C++_
+    - [Solución](Geppetto.py) - _Python_
 ## Referencias 
 -  [Recursion and Backtracking](https://www.hackerearth.com/practice/basic-programming/recursion/recursion-and-backtracking/tutorial/)
 -  [A tree-based introduction to backtracking](https://medium.com/swlh/a-tree-based-introduction-to-backtracking-57e38264b2d2)
