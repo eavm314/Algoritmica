@@ -33,12 +33,11 @@ solve(4,22)
             solve(1,7)
         solve(2,13)
     solve(3,22)
-
 */
 
 int main() {
 
-    //input;
+    input;
     int n;
     cin >> n;
     memset(dp, -1, sizeof(dp));
